@@ -57,7 +57,7 @@ double x = std::sin(3.1)
 // .L metacommand => links libz at runntime
 #include "zlib.h"
 zlibVersion()
-// prints (const char * const) 
+// prints (const char * const) "1.2.3.4"
 ```
 
 #ToDo
