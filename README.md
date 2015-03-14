@@ -18,7 +18,13 @@ cat myfile.cpp | docker run -it --rm nikhedonia/cling cling
 
 ##note
 
-cling runs in a container, so it has no access to files of your machine unless you explicitly bind them with "-v"
+cling runs in a container, so it has no access to files of your machine unless you explicitly mount them.
+
+eg:
+
+```sh
+docker run -v /path/to/my/Project:/src -it --rm nikhedonia/cling cling -I/src
+```
 
 for more info i suggest visiting docker.com 
 
@@ -56,5 +62,5 @@ zlibVersion()
 
 #ToDo
 - discover best practices
-- write a script to allow a convinient usage like 'cling test.cpp'
+- write a script to allow a convinient usage eg: 'cling test.cpp'
 
